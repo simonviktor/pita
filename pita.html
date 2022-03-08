@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pita</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <fieldset style="width: 100px; border: 2px solid black; background-color: bisque; margin: auto; border-radius: 20px;">
+        <legend style="text-align: center; border: 2px solid black; border-radius: 5px; background-color: bisque;">Számolás</legend>
+        <img src="pita.png" alt=""><br>
+        <hr>
+        <input type="number" placeholder="A oldal" id="aoldal" style="border-radius: 5px; border: 2px solid black; background-color: antiquewhite; display: flex; margin: auto;"><br>
+        <input type="number" placeholder="B oldal" id="boldal" style="border-radius: 5px; border: 2px solid black; background-color: antiquewhite; display: flex; margin: auto;"><br>
+        <button onclick="pita(aoldal.value,boldal.value)" style="border-radius: 5px; border: 2px solid black; background-color: antiquewhite; display: flex; margin: auto;">SZÁMÍT</button>
+        <hr>
+        <p>Eredmény:</p>
+        <p><span id="c"></span></p>
+    </fieldset>
+    <script>
+        function pita(a,b) {
+            var c = 0
+            document.getElementById("c").innerHTML=Math.sqrt(a*a+b*b);  
+        }
+    </script>
+</body>
+</html>
